@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>La Frames India</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container nav-shell">
+			<a class="brand" href="#home" aria-label="La Frames India home">
+				<span class="brand-mark">LF</span>
+				<span>La Frames India</span>
+			</a>
+			<nav class="nav-links" aria-label="Main navigation">
+				<a href="#home">Home</a>
+				<a href="#places">Tourist Places</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="home">
+		<section class="hero">
+			<div class="container hero-grid">
+				<div class="hero-copy">
+					<p class="eyebrow">Creamy travel showcase</p>
+					<h1>La Frames India</h1>
+					<p class="hero-description">Frames of India</p>
+					<p class="hero-text">
+						Explore the beauty of India through a curated selection of tourist places, each with its own charm, history, and atmosphere.
+					</p>
+					<div class="hero-actions">
+						<a class="btn primary" href="#places">Explore Places</a>
+						<a class="btn secondary" href="#about">About the site</a>
+					</div>
+				</div>
+				<div class="hero-art" aria-label="Taj Mahal background banner">
+					<div class="hero-badge">
+						<strong>India</strong>
+						<span>Elegant • Blurred • Creamy</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="places" class="section-block">
+			<div class="container section-shell">
+				<div class="section-inner">
+					<div class="section-heading">
+						<div>
+							<h2>Tourist Places</h2>
+							<p>Select a city to view a few highlights and their airport distance.</p>
+						</div>
+					</div>
+					<div class="show-toolbar" id="countryButtons" aria-label="Destination selector"></div>
+					<div class="country-grid" id="galleryGrid" aria-live="polite"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="section-block">
+			<div class="container section-shell">
+				<div class="section-inner">
+					<div class="section-heading">
+						<div>
+							<h2>About</h2>
+							<p>Centered and simplified so the section reads cleanly on desktop and mobile.</p>
+						</div>
+					</div>
+					<div class="about-center">
+						<article class="about-card about-card-center">
+							<span class="mini-label">About La Frames India</span>
+							<h3>Travel meets elegant design</h3>
+							<p>
+								This site focuses on tourist places in India with a creamy palette, soft shadows, and a blurred Taj Mahal-inspired hero.
+							</p>
+							<p>
+								The layout keeps the content in the center so the page feels balanced and easy to scan.
+							</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="section-block">
+			<div class="container section-shell">
+				<div class="section-inner">
+					<div class="section-heading">
+						<div>
+							<h2>Contact</h2>
+							<p>Tap any icon to reveal the matching contact detail.</p>
+						</div>
+					</div>
+					<div class="contact-grid">
+						<article class="contact-card contact-toggle" data-title="Email" data-detail="joseph@laframe.com">
+							<button class="contact-icon" type="button" aria-expanded="false" aria-label="Show email contact details">✉</button>
+							<div class="contact-reveal">
+								<span class="mini-label">Email</span>
+								<p class="contact-detail" hidden></p>
+							</div>
+						</article>
+						<article class="contact-card contact-toggle" data-title="Phone" data-detail="+91 98765 43210">
+							<button class="contact-icon" type="button" aria-expanded="false" aria-label="Show phone contact details">☎</button>
+							<div class="contact-reveal">
+								<span class="mini-label">Phone</span>
+								<p class="contact-detail" hidden></p>
+							</div>
+						</article>
+						<article class="contact-card contact-toggle" data-title="Location" data-detail="Kochi, Kerala">
+							<button class="contact-icon" type="button" aria-expanded="false" aria-label="Show location contact details">⌂</button>
+							<div class="contact-reveal">
+								<span class="mini-label">Location</span>
+								<p class="contact-detail" hidden></p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		const galleryData = {
+			Delhi: [
+				{ title: 'Red Fort', desc: 'A historic red sandstone fort and a symbol of Delhi’s rich Mughal history.', airport: 'Indira Gandhi International Airport', km: 'Approx. 20 km', url: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80' },
+				{ title: 'Qutub Minar', desc: 'A UNESCO World Heritage site known for its soaring minaret and ancient complex.', airport: 'Indira Gandhi International Airport', km: 'Approx. 15 km', url: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=1200&q=80' },
+				{ title: 'India Gate', desc: 'A national monument and popular evening spot in the heart of the capital.', airport: 'Indira Gandhi International Airport', km: 'Approx. 15 km', url: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80' }
+			],
+			Mumbai: [
+				{ title: 'Gateway of India', desc: 'An iconic waterfront monument and one of Mumbai’s most visited landmarks.', airport: 'Chhatrapati Shivaji Maharaj International Airport', km: 'Approx. 25 km', url: 'https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?auto=format&fit=crop&w=1200&q=80' },
+				{ title: 'Marine Drive', desc: 'A scenic seaside boulevard famous for sunsets and city skyline views.', airport: 'Chhatrapati Shivaji Maharaj International Airport', km: 'Approx. 22 km', url: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80' },
+				{ title: 'Elephanta Caves', desc: 'Rock-cut cave temples and a UNESCO site accessible by ferry from Mumbai.', airport: 'Chhatrapati Shivaji Maharaj International Airport', km: 'Approx. 10 km to ferry point', url: 'https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1200&q=80' }
+			],
+			Kerala: [
+				{ title: 'Munnar Tea Gardens', desc: 'Rolling plantations, cool mountain air, and some of Kerala’s best views.', airport: 'Cochin International Airport', km: 'Approx. 110 km', url: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80' },
+				{ title: 'Alleppey Backwaters', desc: 'Houseboats and calm waterways that showcase Kerala’s signature scenery.', airport: 'Cochin International Airport', km: 'Approx. 83 km', url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80' },
+				{ title: 'Kovalam Beach', desc: 'A peaceful coastal destination with soft sands and beautiful sea views.', airport: 'Trivandrum International Airport', km: 'Approx. 18 km', url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80' }
+			]
+		};
+
+		const countryButtons = document.getElementById('countryButtons');
+		const galleryGrid = document.getElementById('galleryGrid');
+		let activeCountry = 'Delhi';
+
+		function renderCountries() {
+			countryButtons.innerHTML = '';
+
+			Object.keys(galleryData).forEach((country) => {
+				const button = document.createElement('button');
+				button.className = `country-btn${country === activeCountry ? ' active' : ''}`;
+				button.type = 'button';
+				button.textContent = country;
+				button.addEventListener('click', () => {
+					activeCountry = country;
+					renderCountries();
+					renderGallery();
+				});
+				countryButtons.appendChild(button);
+			});
+		}
+
+		function renderGallery() {
+			galleryGrid.innerHTML = '';
+
+			galleryData[activeCountry].forEach((frame) => {
+				const card = document.createElement('article');
+				card.className = 'frame-card';
+
+				card.innerHTML = `
+					<div class="frame-preview">
+						<img alt="${activeCountry} ${frame.title} preview">
+						<span>${frame.title}</span>
+					</div>
+					<div class="frame-body">
+						<h3>${frame.title}</h3>
+						<p class="frame-meta">${frame.desc}</p>
+						<p class="frame-meta frame-airport">${frame.airport} · ${frame.km} from airport</p>
+					</div>
+				`;
+
+				const img = card.querySelector('img');
+				img.src = frame.url;
+
+				galleryGrid.appendChild(card);
+			});
+		}
+
+		renderCountries();
+		renderGallery();
+
+		document.querySelectorAll('.contact-toggle').forEach((card) => {
+			const button = card.querySelector('.contact-icon');
+			const detail = card.querySelector('.contact-detail');
+			const title = card.dataset.title;
+			const value = card.dataset.detail;
+
+			button.addEventListener('click', () => {
+				const isOpen = button.getAttribute('aria-expanded') === 'true';
+				button.setAttribute('aria-expanded', String(!isOpen));
+				detail.hidden = isOpen;
+				detail.textContent = `${title}: ${value}`;
+				card.classList.toggle('active', !isOpen);
+			});
+		});
+	</script>
+</body>
+</html>
