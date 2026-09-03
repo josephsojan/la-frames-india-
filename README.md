@@ -2,7 +2,7 @@
 
 La Frames India is a refined, responsive travel showcase website that highlights some of the most iconic destinations in India. The project presents a modern, elegant browsing experience with a curated collection of tourist places, travel details, and a clean contact section.
 
-## Overview
+
 
 This project is designed to provide a polished introduction to India’s cultural and natural landmarks through a visually appealing one-page experience. It combines simple web technologies with a strong emphasis on layout, storytelling, and user experience.
 
